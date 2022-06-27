@@ -219,6 +219,19 @@ func (mw *GinJWTMiddleware) unauthorized(c *gin.Context, code int, message strin
 	mw.Unauthorized(c, code, message)
 }
 
+func ExtractClaimsFromToken(token *jwt.Token) MapClaims {
+	if token == nil {
+		return make(MapClaims)
+	}
+
+	claims := MapClaims{}
+	for key, value := range token.Claims.(jwt.MapClaims) {
+		claims[key] = value
+	}
+
+	return claims
+}
+
 func ExtractClaims(c *gin.Context, claimsKey string) MapClaims {
 	claims, exists := c.Get(claimsKey)
 	if !exists {
