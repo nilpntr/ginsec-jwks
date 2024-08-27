@@ -1,6 +1,6 @@
 module github.com/nilpntr/ginsec-jwks
 
-go 1.22
+go 1.23
 
 require (
 	github.com/MicahParks/keyfunc/v2 v2.1.0
