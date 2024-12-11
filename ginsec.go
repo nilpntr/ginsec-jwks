@@ -2,7 +2,7 @@ package ginsec
 
 import (
 	"errors"
-	"github.com/MicahParks/keyfunc/v2"
+	"github.com/MicahParks/keyfunc/v3"
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
 	"net/http"
@@ -63,17 +63,17 @@ type GinJWTMiddleware struct {
 	ClaimsKey string
 
 	// jwks
-	jwks *keyfunc.JWKS
+	jwks keyfunc.Keyfunc
 }
 
-func New(mw *GinJWTMiddleware, jwks *keyfunc.JWKS) (*GinJWTMiddleware, error) {
+func New(mw *GinJWTMiddleware, jwks keyfunc.Keyfunc) (*GinJWTMiddleware, error) {
 	if err := mw.MiddlewareInit(jwks); err != nil {
 		return nil, err
 	}
 	return mw, nil
 }
 
-func (mw *GinJWTMiddleware) MiddlewareInit(jwks *keyfunc.JWKS) error {
+func (mw *GinJWTMiddleware) MiddlewareInit(jwks keyfunc.Keyfunc) error {
 	mw.jwks = jwks
 
 	if mw.TokenLookup == "" {
