@@ -5,7 +5,7 @@ go 1.23
 require (
 	github.com/MicahParks/keyfunc/v3 v3.3.10
 	github.com/gin-gonic/gin v1.10.0
-	github.com/golang-jwt/jwt/v5 v5.2.1
+	github.com/golang-jwt/jwt/v5 v5.2.2
 )
 
 require (
