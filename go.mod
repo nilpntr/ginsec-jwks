@@ -7,7 +7,7 @@ toolchain go1.24.1
 require (
 	github.com/MicahParks/keyfunc/v3 v3.3.11
 	github.com/gin-gonic/gin v1.10.1
-	github.com/golang-jwt/jwt/v5 v5.2.2
+	github.com/golang-jwt/jwt/v5 v5.2.3
 )
 
 require (
