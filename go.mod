@@ -3,13 +3,13 @@ module github.com/nilpntr/ginsec-jwks
 go 1.25.0
 
 require (
-	github.com/MicahParks/keyfunc/v3 v3.8.1
+	github.com/MicahParks/keyfunc/v3 v3.8.2
 	github.com/gin-gonic/gin v1.12.0
 	github.com/golang-jwt/jwt/v5 v5.3.1
 )
 
 require (
-	github.com/MicahParks/jwkset v0.11.1 // indirect
+	github.com/MicahParks/jwkset v0.11.3 // indirect
 	github.com/bytedance/gopkg v0.1.3 // indirect
 	github.com/bytedance/sonic v1.15.0 // indirect
 	github.com/bytedance/sonic/loader v0.5.0 // indirect
